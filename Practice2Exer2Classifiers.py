@@ -39,10 +39,6 @@ f1_logistic = f1_score(y_test, logistic_predictions, average='micro')
 cm_logistic = confusion_matrix(y_test, logistic_predictions)
 
 print("Logistic Regression Accuracy:", accuracy_logistic)
-print("Precision (Logistic Regression):", precision_logistic)
-print("Recall (Logistic Regression):", recall_logistic)
-print("F1 Score (Logistic Regression):", f1_logistic)
-print("Confusion Matrix (Logistic Regression):\n", cm_logistic)
 
 
 # 2. K-Nearest Neighbors
@@ -57,10 +53,7 @@ f1_knn = f1_score(y_test, knn_predictions, average='micro')
 cm_knn = confusion_matrix(y_test, knn_predictions)
 
 print("K-Nearest Neighbors Accuracy:", accuracy_knn)
-print("Precision (K-Nearest Neighbors):", precision_knn)
-print("Recall (K-Nearest Neighbors):", recall_knn)
-print("F1 Score (K-Nearest Neighbors):", f1_knn)
-print("Confusion Matrix (K-Nearest Neighbors):\n", cm_knn)
+
 
 
 # 3. Naive Bayes
@@ -75,10 +68,7 @@ f1_naive_bayes = f1_score(y_test, naive_bayes_predictions, average='micro')
 cm_naive_bayes = confusion_matrix(y_test, naive_bayes_predictions)
 
 print("Naive Bayes Accuracy:", accuracy_naive_bayes)
-print("Precision (Naive Bayes):", precision_naive_bayes)
-print("Recall (Naive Bayes):", recall_naive_bayes)
-print("F1 Score (Naive Bayes):", f1_naive_bayes)
-print("Confusion Matrix (Naive Bayes):\n", cm_naive_bayes)
+
 
 
 # 4. Red Neuronal (usando TensorFlow/Keras)
@@ -96,14 +86,5 @@ model.evaluate(X_test, y_test)
 
 nn_predictions = model.predict(X_test).round()
 
-accuracy_nn = accuracy_score(y_test, nn_predictions.round())
-precision_nn = precision_score(y_test, nn_predictions.round(), average='micro')
-recall_nn = recall_score(y_test, nn_predictions.round(), average='micro')
-f1_nn = f1_score(y_test, nn_predictions.round(), average='micro')
-cm_nn = confusion_matrix(y_test, nn_predictions.round())
 
 print("Neural Network Accuracy:", accuracy_nn)
-print("Precision (Neural Network):", precision_nn)
-print("Recall (Neural Network):", recall_nn)
-print("F1 Score (Neural Network):", f1_nn)
-print("Confusion Matrix (Neural Network):\n", cm_nn)
