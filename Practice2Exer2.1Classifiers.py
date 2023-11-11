@@ -67,9 +67,4 @@ f1_nn = f1_score(y_test, nn_predictions)
 cm_nn = confusion_matrix(y_test, nn_predictions)
 
 print("Red Neuronal Accuracy:", accuracy_nn)
-print("Precision (Neural Network):", precision_nn)
-print("Recall (Neural Network):", recall_nn)
-print("F1 Score (Neural Network):", f1_nn)
-print("Confusion Matrix (Neural Network):\n", cm_nn)
 
-# Estos son los resultados de SVM y la Red Neuronal usando las métricas.

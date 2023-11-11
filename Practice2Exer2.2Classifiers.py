@@ -65,24 +65,4 @@ cm_linear = confusion_matrix(y_test, linear_predictions_binary)
 
 print("Accuracy (Linear Regression):", accuracy_linear)
 print("Precision (Linear Regression):", precision_linear)
-print("Sensitivity (Linear Regression):", sensitivity_linear)
-print("Specificity (Linear Regression):", specificity_linear)
-print("F1 Score (Linear Regression):", f1_linear)
-print("Confusion Matrix (Linear Regression):\n", cm_linear)
 
-
-
-# Evaluar el modelo de red neuronal usando las métricas solicitadas
-accuracy_nn = accuracy_score(y_test, nn_predictions_binary)
-precision_nn = precision_score(y_test, nn_predictions_binary)
-sensitivity_nn = recall_score(y_test, nn_predictions_binary)
-specificity_nn = recall_score(y_test, nn_predictions_binary, pos_label=0)
-f1_nn = f1_score(y_test, nn_predictions_binary)
-cm_nn = confusion_matrix(y_test, nn_predictions_binary)
-
-print("Accuracy (Neural Network):", accuracy_nn)
-print("Precision (Neural Network):", precision_nn)
-print("Sensitivity (Neural Network):", sensitivity_nn)
-print("Specificity (Neural Network):", specificity_nn)
-print("F1 Score (Neural Network):", f1_nn)
-print("Confusion Matrix (Neural Network):\n", cm_nn)
